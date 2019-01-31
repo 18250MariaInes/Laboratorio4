@@ -11,9 +11,10 @@ import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-
+//activity que despliega Navigateview con todas la demás actividades
+//USO DE HERRAMIENTA NAVIGATION DRAWER
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
+//todos los métodos default que traer el navigation view que se pueden modificar a nuestra conveniencia
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -56,7 +57,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             else -> return super.onOptionsItemSelected(item)
         }
     }
-
+//metodo que abre la actividad que el usuario a escogido en el Navigate view
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
@@ -65,11 +66,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intentVerContacto)
             }
             R.id.nav_slideshow -> {
-                val intentVerContacto = Intent(this, Direccion::class.java)
-                startActivity(intentVerContacto)
+                val intentVerProyectos = Intent(this, Proyectos::class.java)
+                startActivity(intentVerProyectos)
             }
             R.id.nav_manage -> {
-
+                val intentVerMapa = Intent(this, Direccion::class.java)
+                startActivity(intentVerMapa)
             }
 
         }

@@ -11,7 +11,8 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 class Direccion : AppCompatActivity(), OnMapReadyCallback {
-
+//activity predeterminada para la visualización de los mapas
+    //USO DE HERRAMIENTA GOOGLE MAPS
     private lateinit var mMap: GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,9 +36,9 @@ class Direccion : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        // Add a marker in Guatemala and move the camera
+        val guatemala = LatLng(14.6229, -90.5315)
+        mMap.addMarker(MarkerOptions().position(guatemala).title("Marker in Guatemala"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(guatemala))
     }
 }
