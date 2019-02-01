@@ -36,7 +36,7 @@ class Direccion : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Add a marker in Guatemala and move the camera
+        // agrega marcador en Guatemala y se puede mover camara
         val guatemala = LatLng(14.6229, -90.5315)
         mMap.addMarker(MarkerOptions().position(guatemala).title("Marker in Guatemala"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(guatemala))
